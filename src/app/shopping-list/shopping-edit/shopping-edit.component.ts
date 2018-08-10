@@ -8,6 +8,7 @@ import { Ingredient } from '../../general/ingredient.model';
 })
 export class ShoppingEditComponent implements OnInit {
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
+  @Output() ingredientCleared = new EventEmitter<{clear:boolean}>();
   ingredientName: string = "";
   ingredientAmount: number = 0;
   ingredient: Ingredient;
@@ -19,5 +20,9 @@ export class ShoppingEditComponent implements OnInit {
   addIngredient(){
     this.ingredient = new Ingredient(this.ingredientName, this.ingredientAmount);
     this.ingredientAdded.emit(this.ingredient);
+  }
+
+  clearIngredient(){
+    this.ingredientCleared.emit({clear:true});
   }
 }
