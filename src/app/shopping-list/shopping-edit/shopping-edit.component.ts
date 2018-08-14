@@ -9,6 +9,7 @@ import { Ingredient } from '../../general/ingredient.model';
 export class ShoppingEditComponent implements OnInit {
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
   @Output() ingredientCleared = new EventEmitter<{clear:boolean}>();
+  
 
   @ViewChild("ingredientAmt") ingrd: ElementRef;
   ingredientName: string = "";

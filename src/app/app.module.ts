@@ -11,6 +11,7 @@ import { RecipeComponent } from './recipes/recipe-list/recipe/recipe.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingListItemsComponent } from './shopping-list/shopping-list-items/shopping-list-items.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ShoppingListItemsComponent } from './shopping-list/shopping-list-items/
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
