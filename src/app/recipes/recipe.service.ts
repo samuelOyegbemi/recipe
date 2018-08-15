@@ -21,4 +21,8 @@ export class RecipeService{
         this.recipes.push(recipe);
         this.recipeAdded.emit(this.recipes);
     }
+
+    getRecipe(indx:number){
+        return this.recipes[indx];
+    }
 }
