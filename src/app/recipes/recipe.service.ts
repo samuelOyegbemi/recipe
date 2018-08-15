@@ -1,10 +1,7 @@
 import { Recipe } from "./recipe.model";
-import { Output, EventEmitter } from "@angular/core";
 
 export class RecipeService{
-    @Output() recipeAdded: EventEmitter<Recipe[]>;
     constructor(){
-        this.recipeAdded = new EventEmitter<Recipe[]>();
     }
 
     private recipes: Recipe[] = [
@@ -19,7 +16,6 @@ export class RecipeService{
 
     addRecipe(recipe: Recipe){
         this.recipes.push(recipe);
-        this.recipeAdded.emit(this.recipes);
     }
 
     getRecipe(indx:number){
