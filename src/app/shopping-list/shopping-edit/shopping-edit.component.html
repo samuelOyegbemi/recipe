@@ -8,15 +8,14 @@
         </div>
         <div class="col-sm-2 form-group">
             <label for="amount">Amount</label>
-            <!--input type="text" id="ingredientAmount" class="form-control" [(ngModel)]="ingredientAmount" [ngModelOptions]="{standalone: true}"-->
-            <input type="text" id="ingredientAmount" class="form-control" #ingredientAmt>
+            <input type="text" id="ingredientAmount" class="form-control" [(ngModel)]="ingredientAmount" [ngModelOptions]="{standalone: true}">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <button class="btn btn-primary mlr" type="submit" (click)="addIngredient()">Add</button>
-          <button class="btn btn-warning mlr" type="submit">Edit</button>
-          <button class="btn btn-danger mlr" type="submit" (click)="clearIngredient()">Clear</button>
+          <button class="btn btn-success" type="submit" >Add</button>
+          <button class="btn btn-danger" type="submit">Edit</button>
+          <button class="btn btn-primary" type="submit">Clear</button>
         </div>
       </div>
     </form>
